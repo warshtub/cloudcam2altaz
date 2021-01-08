@@ -64,8 +64,8 @@ def main(args):
     
     # Set target as fixed body and compute for location
     target = ephem.FixedBody()
-    target.a_ra = raTargetrad
-    target.a_dec = decTargetrad
+    target._ra = raTargetrad
+    target._dec = decTargetrad
     target.compute(siteGem)
     
     altTarget = math.degrees(target.alt)
